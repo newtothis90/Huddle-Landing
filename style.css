@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    --clr-primary-violet: hsl(257 40% 9%);
+    --clr-primary-magenta: hsl(300 69% 71%);
+    --clr-primary-bg: hsl(255, 39%, 50%);
+
+    --ff-1: 'Poppins', sans-serif;
+    --ff-2: 'Open sans', sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 600;
+
+}
+
+body{
+    background: url(images/bg-desktop.svg) no-repeat;
+    background-size: auto 100%;
+    background-color: var(--clr-primary-bg);
+    font-family: var(--ff-2);
+    color: #fff;
+    line-height: 1.5rem;
+    border: 1px solid white;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+header{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 3rem;
+}
+
+h1{
+    font-family: var(--ff-1);
+    line-height: 2.25rem;
+}
+
+.community p{
+    margin: 1rem auto;
+}
+
+.illustration{
+    display: grid;
+    align-items: center;
+}
+
+.illustration img{
+    max-width: 100%;
+}
+
+.community{
+    margin: 0 auto;
+    display: grid;
+    align-content: center;
+    
+}
+
+.register button{
+    height: 40px;
+    width: 200px;
+    border-radius: 2rem;
+    border: none;
+    font-family: var(--ff-1);
+    color: var(--clr-primary-bg);
+    margin: .5rem auto;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, .2);
+}
+
+.register button:active{
+    background-color: var(--clr-primary-magenta);
+    color: white;
+    transform: translate(1px, 1px);
+    box-shadow: none;
+    transition: ease-in-out 75ms;
+}
+
+.icon{
+    fill: #fff;
+    border: 2px solid white;
+    border-radius: 2rem;
+    width: 2rem;
+    height: 2rem;
+    padding: .4rem;
+    margin: 0 .4rem;
+}
+
+.icon:hover{
+    fill: var(--clr-primary-magenta);
+    border: 1px solid var(--clr-primary-magenta);
+}
+
+footer{
+    display: flex;
+    justify-content: end;
+    width: 90%;
+    margin: 0 auto;
+    height: 75px;
+}
+
+@media (max-width: 50em){
+
+    body{
+        background: url(images/bg-mobile.svg) no-repeat;
+        background-color: var(--clr-primary-bg);
+        background-size: contain;
+    }
+    
+    .container{
+        padding: 2.25rem;
+        text-align: center;
+    }
+
+    header{
+        text-align: left;
+        width: 100%;
+        margin-bottom: 20%;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .main-container{
+        grid-template-columns: auto;
+        max-width: 100%;
+    }
+
+    .community{
+        max-width: 100%;
+    }
+
+    footer{
+        justify-content: center;
+        margin-top: 4rem;
+    }
+}
